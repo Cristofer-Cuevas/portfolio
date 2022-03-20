@@ -16,6 +16,7 @@ export const Header = styled.header`
     padding: 0;
     width: 2rem;
   }
+
   .menuIcon {
     cursor: pointer;
     z-index: 20;
@@ -24,7 +25,6 @@ export const Header = styled.header`
 
   .menuContainer {
     position: absolute;
-    /* z-index: 1; */
     top: -25rem;
     right: 0;
     left: 0;
@@ -65,7 +65,6 @@ export const Header = styled.header`
 
   @media screen and (min-width: 800px) {
     position: fixed;
-
     z-index: 30;
     align-items: center;
 
@@ -105,7 +104,6 @@ const Main = styled.main`
     align-items: center;
     justify-content: center;
     height: 100vh;
-
     p {
       padding: 0;
       margin: 0;
@@ -117,10 +115,10 @@ const Main = styled.main`
     font-weight: var(--800-font-weight);
     font-size: 2.3rem;
   }
+
   .name {
     color: #12c3f7;
     font-size: 2.2rem;
-
     font-weight: var(--800-font-weight);
   }
 
@@ -185,7 +183,6 @@ export const AboutMeStyles = styled.section`
     display: inline-block;
     font-size: 1rem;
     margin-top: 1rem;
-    /* z-index: 5; */
     padding: 0.8rem 1.6rem;
     color: #fff;
     border: none;
@@ -229,7 +226,6 @@ export const SkillsContainers = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
-
 margin-bottom: 1rem;
 
   .frontedSkills,
@@ -254,7 +250,7 @@ margin-bottom: 1rem;
   .frontedSkills:hover,
   .backendSkills:hover,
   .otherSkills:hover {
-       transform: scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 10px 15px silver;
     }
 
@@ -289,7 +285,6 @@ margin-bottom: 1rem;
     font-size: 1.4rem;
     margin-bottom: 0;
     font-weight: var(--900-font-weight);
-
     color: var(--color-white);
   }
 
@@ -308,7 +303,6 @@ export const ProjectsStyles = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
-
   width: 90%;
 
   .skills {
@@ -363,7 +357,6 @@ export const ProjectsStyles = styled.section`
       padding: 0;
       margin: 0;
     }
-
     span {
       margin: 0 0.5rem;
     }
@@ -406,6 +399,7 @@ export const ContactsStyles = styled.section`
   }
 
   .emailSenderContainer {
+    padding: 0 .5rem;
     margin-top: 3rem;
   }
 
@@ -519,18 +513,39 @@ export const ContactsStyles = styled.section`
     color: #d91434;
   }
 
+  .loading-spinner {
+    display: inline-block;
+    animation: rotate-infinite 1s linear infinite;
+    border: 5px solid #00a81c;
+    border-right-color: transparent;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 2rem;
+     margin-bottom: -.7rem;
+  }
+
+  @keyframes rotate-infinite {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100%  {
+      -webkit-transform: rotate(360deg); 
+    }
+  }
+
   @media screen and (min-width: 768px) {
     .titleComponent {
       font-size: 3rem;
       text-align: center;
       margin-bottom: 3rem;
     }
-
+    
     .titleComponent:after {
       margin: 0 auto;
       width: 12rem;
-
     }
+
     .nameAndEmailInputs {
       display: flex;
       align-items: center;
@@ -552,6 +567,7 @@ export const ContactsStyles = styled.section`
     .infoContainer {
       width: 30%;
      }
+
     .emailSenderContainer {
       width: 65%;
     }
@@ -563,7 +579,6 @@ export const FooterStyles = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   height: 7rem;
   background-color: #1d2844;

@@ -235,6 +235,7 @@ const Projects = () => {
 
 const Contact = () => {
   const [formState, setFormState] = useState({});
+  const [showSpinner, setShowSpinner] = useState(false);
   const textAreaRef = useRef(null);
   const inputEmailRef = useRef(null);
   const inputNameRef = useRef(null);
@@ -245,6 +246,7 @@ const Contact = () => {
     if (!inputNameRef.current.value || !inputEmailRef.current.value || !textAreaRef.current.value) {
       setFormState({ isFieldEmpty: true });
     } else {
+      setShowSpinner(true);
       fetch(`https://pern-bank-system-app.herokuapp.com/email-message-from-portfolio`, {
         method: "POST",
         headers: {
@@ -261,6 +263,7 @@ const Contact = () => {
       })
         .then((res) => res.json())
         .then((res) => {
+          setShowSpinner(false);
           if (res.isMessageSent === true) {
             setFormState({ showAnimation: "showAnimation" });
           }
@@ -292,8 +295,8 @@ const Contact = () => {
       </div>
 
       <div className="emailSenderContainer">
-        {formState?.isFieldEmpty ? <p className="completeForm">Please complete the form.</p> : null}
         <form>
+          {formState?.isFieldEmpty ? <p className="completeForm">Please complete the form.</p> : null}
           <div className="nameAndEmailInputs">
             <input ref={inputNameRef} className="inputName" placeholder="Name" type="text" autoComplete="name" />
             <input ref={inputEmailRef} className="inputEmail" placeholder="Email" type="text" autoComplete="email" />
@@ -305,9 +308,9 @@ const Contact = () => {
           <button onClick={handleClearFormBtnClick} className="clearContactFormBtn">
             Clear
           </button>
+          {showSpinner ? <div className="loading-spinner"></div> : null}
         </form>
-        {/* {formState?.isMessageSent ? <p className="emailSent">Thanks! Email has been sent</p> : null} */}
-        <p className={`emailSent ${formState?.showAnimation}`}>Thanks! Email has been sent</p>
+        <p className={`emailSent ${formState?.showAnimation || ""}`}>Thanks! Email has been sent</p>
       </div>
     </ContactsStyles>
   );
