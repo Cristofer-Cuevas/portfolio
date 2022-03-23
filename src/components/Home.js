@@ -101,12 +101,13 @@ const AboutMe = () => {
     <AboutMeStyles id="aboutMe">
       <div className="textContainer">
         <h2 className="titleComponent">About Me</h2>
-        <p className="aboutMeParagraph">Hello, I'm Cristofer and I'm a MERN/PERN-Stack Developer.</p>
-        <p className="aboutMeParagraph">I have a serious passion for creating responsive, feature rich websites with a great user experience.</p>
+        <p className="aboutMeParagraph">Hello, I'm Cristofer, and I'm a MERN/PERN-Stack Developer. In addition, I'm currently learning Python, the goal is to learn algorithms and have a deep understanding of how computers work under the hood.</p>
 
-        <p className="aboutMeParagraph">I'm currenly looking for an opportunity to show my potential.</p>
+        <p className="aboutMeParagraph">Consistency and determination to learn and try new things have taken me to this point in my life where I know what I want and where I'm going. </p>
 
-        <a className="resumeBtn" href="/" onClick={handleResumeClick}>
+        <p className="aboutMeParagraph">Being a self-taught have helped me to be a fast learner and not to be afraid of new challenges.</p>
+
+        <a className="resumeBtn" href="https://www.docdroid.net/vCkuHcG/cristofer-cv-pdf" target="_blank" rel="noreferrer" onClick={handleResumeClick}>
           Resume
         </a>
         <a className="hiremeBtn" href="#contacts">
@@ -177,12 +178,12 @@ const Projects = () => {
         <h3 className="projectName">Chat App</h3>
         <p className="projectDescription">Chat App is a website that allows private messaging and user authentication based on JWT. Another important feature of this App is that it request messages by chunks instead of requesting them all at once therefore improving performance.</p>
         <div className="buttonsContainer">
-          <a href="@" className="liveDemoBtn">
+          <a href="https://mern-stack-chat-app.vercel.app" target="_blank" rel="noreferrer" className="liveDemoBtn">
             {" "}
             <img src={eyeIcon} alt="eye" />
             <span>Live Demo</span>
           </a>
-          <a href="@" className="codeBtn">
+          <a href="https://github.com/programmerXS/mern-stack-chat-app" target="_blank" rel="noreferrer" className="codeBtn">
             <img src={tagIcon} alt="tag" />
             <span>Code</span>
           </a>
@@ -272,8 +273,6 @@ const Contact = () => {
       inputEmailRef.current.value = "";
       textAreaRef.current.value = "";
     }
-
-    // setFormState({ showAnimation: "showAnimation" });
   };
 
   const handleClearFormBtnClick = (e) => {

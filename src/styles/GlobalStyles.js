@@ -1,9 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
-
-
-:root {
+ :root {
 	--500-font-weight: 500;
 	--600-font-weight: 600;
 	--800-font-weight: 800;
@@ -12,7 +10,6 @@ const GlobalStyles = createGlobalStyle`
 
 }
 
-
 * {
 	scroll-behavior: smooth;
 	box-sizing: border-box;
@@ -20,8 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
 html{
 	width: 100%;
-	height: 100%;
-	
+	height: 100%;	
 }
 
 body {
@@ -74,7 +70,6 @@ transform: scale(95%);
  .showBgSticky {
 	 background-color: #6736dd;
  }
-  }
 
 `;
 
