@@ -90,13 +90,6 @@ const Home = () => {
 };
 
 const AboutMe = () => {
-  const resumeContainerRef = useRef(null);
-  const handleResumeClick = (e) => {
-    e.preventDefault();
-
-    resumeContainerRef.current.classList.toggle("showResumeContainer");
-  };
-
   return (
     <AboutMeStyles id="aboutMe">
       <div className="textContainer">
@@ -107,7 +100,7 @@ const AboutMe = () => {
 
         <p className="aboutMeParagraph">Being a self-taught have helped me to be a fast learner and not to be afraid of new challenges.</p>
 
-        <a className="resumeBtn" href="https://www.docdroid.net/vCkuHcG/cristofer-cv-pdf" target="_blank" rel="noreferrer" onClick={handleResumeClick}>
+        <a className="resumeBtn" href="https://www.docdroid.net/vCkuHcG/cristofer-cv-pdf" target="_blank" rel="noreferrer">
           Resume
         </a>
         <a className="hiremeBtn" href="#contacts">
