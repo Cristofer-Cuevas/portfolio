@@ -96,8 +96,6 @@ const AboutMe = () => {
         <h2 className="titleComponent">About Me</h2>
         <p className="aboutMeParagraph">Hello, I'm Cristofer, and I'm a MERN/PERN-Stack Developer. In addition, I'm currently learning Python, the goal is to learn algorithms and have a deep understanding of how computers work under the hood.</p>
 
-        <p className="aboutMeParagraph">Consistency and determination to learn and try new things have taken me to this point in my life where I know what I want and where I'm going. </p>
-
         <p className="aboutMeParagraph">Being a self-taught have helped me to be a fast learner and not to be afraid of new challenges.</p>
 
         <a className="resumeBtn" href="https://www.docdroid.net/vCkuHcG/cristofer-cv-pdf" target="_blank" rel="noreferrer">
