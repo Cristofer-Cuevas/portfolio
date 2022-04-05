@@ -140,6 +140,7 @@ const Skills = () => {
           <li className="skillName">Mongoose</li>
           <li className="skillName">Passport</li>
           <li className="skillName">jsonwebtoken</li>
+          <li className="skillName">Jest</li>
         </ul>
       </div>
 
@@ -150,8 +151,10 @@ const Skills = () => {
           <li className="skillName">Google APIs</li>
           <li className="skillName">Git</li>
           <li className="skillName">Linux</li>
-          <li className="skillName">CLI</li>
           <li className="skillName">VS Code</li>
+          <li className="skillName">CLI</li>
+          <li className="skillName">Postman</li>
+          <li className="skillName">TDD</li>
         </ul>
       </div>
     </SkillsContainers>
